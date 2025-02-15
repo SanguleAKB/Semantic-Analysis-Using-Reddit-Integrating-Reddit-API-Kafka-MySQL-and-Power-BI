@@ -1,0 +1,32 @@
+# install Kafka 
+https://kafka.apache.org/downloads
+
+# extract file 
+# create file in D drive with name kafka 
+
+# command to activate zookeeper
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+
+# command to activate Kafka server
+ .\bin\windows\kafka-server-start.bat .\config\server.properties
+
+
+# create topic with default partition and replication factor 
+kafka-topics.bat --create --bootstrap-server localhost:9092 --topic stone    <- But i ready this topic 
+
+
+# activate a producer
+kafka-console-producer.bat --broker-list localhost:9092 --topic stone  
+
+# activate consumer 
+kafka-console-consumer.bat --topic stone --bootstrap-server localhost:9092 --from-beginning
+
+
+# install MySQL 
+
+# install MySQL ODBC connector 
+https://dev.mysql.com/downloads/connector/net/?os=src
+
+
+# Just top 10 users 
